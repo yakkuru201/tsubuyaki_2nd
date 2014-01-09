@@ -1,6 +1,8 @@
 Tsubuyaki2nd::Application.routes.draw do
   devise_for :users
-  resources :tweets
+  resources :tweets do
+    post :favorite
+  end
 
   root to: 'tweets#index'
 
