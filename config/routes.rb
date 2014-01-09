@@ -1,6 +1,7 @@
 Tsubuyaki2nd::Application.routes.draw do
   devise_for :users
-  resources :tweets, except: [:show]
+  resources :tweets, except: [:new, :show]
+
 
   root to: 'tweets#index'
 
